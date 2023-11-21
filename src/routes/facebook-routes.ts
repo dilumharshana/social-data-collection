@@ -4,7 +4,7 @@ import { facebook_data_loader } from "../services/facebook-data-loader.js";
 const router = express.Router();
 
 router.get(
-  "user/:userId",
+  "/user/:userId",
   async (req, res) => await facebook_data_loader(req, res)
 );
 
