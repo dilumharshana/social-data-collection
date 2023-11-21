@@ -16,4 +16,5 @@ app.use(bodyParser.json());
 
 app.use("/api", appRoutes);
 
+//initialize server
 app.listen(application_port, initializeApp);
