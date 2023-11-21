@@ -10,9 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dilum Harshana",
-  "license": "ISC", 
+  "license": "ISC",
   "dependencies": {
     "@n-h-n/linkedin-profile-scraper": "^2.7.3",
+    "body-parse": "^0.1.0",
+    "body-parser": "^1.20.2",
     "connect": "^3.7.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
