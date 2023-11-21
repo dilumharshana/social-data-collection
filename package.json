@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"npm run build && dist/index.js",
-    "build":"tsc",
+    "start": "npm run build && npm dist/index.js",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dilum Harshana",
-  "license": "ISC",
+  "license": "ISC", 
   "dependencies": {
     "@n-h-n/linkedin-profile-scraper": "^2.7.3",
     "connect": "^3.7.0",
@@ -19,6 +19,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@types/node": "^20.9.2",
     "typescript": "^5.2.2"
   }
 }
