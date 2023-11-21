@@ -13,4 +13,5 @@ export const initializeApp = async () => {
   await connectDatabase();
 
   console.log(`Server started on PORT : http://${process.env.port}`);
+  console.log(`Try your first end point : http://localhost:8080/api/facebook/users/1`);
 };
