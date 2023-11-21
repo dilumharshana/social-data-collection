@@ -1,9 +1,9 @@
 import express from "express";
-import facebookRoutes from "./routes/router-index.js";
+import appRoutes from "./routes/router-index.js";
 
 const app = express();
 
-app.use("/", facebookRoutes);
+app.use("/", appRoutes);
 
 app.listen(4000, console.log("app started"));
 
