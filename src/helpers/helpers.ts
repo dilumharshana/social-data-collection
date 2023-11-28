@@ -1,18 +1,19 @@
-import {
-  ERROR_CODE,
-  FAIL_STATE,
-  SUCCESS_CODE,
-  SUCCESS_STATE
-} from "../constants/app-constants.js";
+import { FAIL_STATE, SUCCESS_STATE } from "../constants/app-constants.js";
 
 export const generateResponse = (
-  responseObject:any,
-  isSuccess: boolean,
+  responseObject: any,
   data: any
 ) => {
-  responseObject.json({
-    status: isSuccess ? SUCCESS_STATE : FAIL_STATE,
-    code: isSuccess ? SUCCESS_CODE : ERROR_CODE,
-    data:data
-  });
+
+  //default response object
+  const response = {
+    status: data? SUCCESS_STATE : FAIL_STATE,
+  }
+
+  //append data to the response only if data is available
+  if(data){
+    response["data"] = data
+  }
+
+  responseObject.json(response);
 };

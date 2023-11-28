@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npm run build && npm dist/index.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@n-h-n/linkedin-profile-scraper": "^2.7.3",
+    "@prisma/client": "^5.6.0",
     "body-parse": "^0.1.0",
     "body-parser": "^1.20.2",
     "connect": "^3.7.0",
