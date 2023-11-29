@@ -1,6 +1,7 @@
 import express from "express";
 import {
   addItems,
+  deleteItem,
   getItem,
   getItems,
   updateItem
@@ -15,5 +16,7 @@ router.get("/:id", async (req, res) => await getItem(req, res));
 router.post("/add-item", async (req, res) => await addItems(req, res));
 
 router.put("/", async (req, res) => await updateItem(req, res));
+
+router.delete("/:id", async (req, res) => await deleteItem(req, res));
 
 export default router;

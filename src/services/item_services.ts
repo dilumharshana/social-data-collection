@@ -60,7 +60,7 @@ export const getItem = async (req, res) => {
   }
 };
 
-// get a single item by id from items table
+// update a single item by id from items table
 export const updateItem = async (req, res) => {
   const { itemId, itemName } = req.body || null;
 
@@ -74,6 +74,28 @@ export const updateItem = async (req, res) => {
       data: {
         name: itemName
       }
+    });
+
+    return generateResponse(res, response);
+  } catch (error) {
+    console.log(error);
+    return generateResponse(res, null);
+  } finally {
+    await prisma.$disconnect();
+  }
+};
+
+// get a single item by id from items table
+export const deleteItem = async (req, res) => {
+  const itemId = req.params.id|| null;
+
+  if (!itemId) return;
+
+  try {
+    const response = await prisma.items.delete({
+      where: {
+        id: parseInt(itemId)
+      },
     });
 
     return generateResponse(res, response);
